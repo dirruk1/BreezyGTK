@@ -1,6 +1,6 @@
 # Breezy | ScionicSpectre
 
-gtk-color-scheme	= "base_color:#FFFFFF\nfg_color:#000000\ntooltip_fg_color:#FFFFFF\nselected_bg_color:#3DAEE9\nselected_fg_color:#FFFFFF\ntext_color:#313639\nbg_color:#EFF0F1\ntooltip_bg_color:#343434"
+gtk-color-scheme	= "base_color:#FFFFFF\nfg_color:#000000\ntooltip_fg_color:#000000\ntooltip_bg_color:#FFFFFF"\nselected_bg_color:#3DAEE9\nselected_fg_color:#FFFFFF\ntext_color:#313639\nbg_color:#EFF0F1
 
 gtk-auto-mnemonics	= 1
 
