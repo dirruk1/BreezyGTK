@@ -1,6 +1,6 @@
 # Breezy | ScionicSpectre
 
-gtk-color-scheme	= "base_color:#FFFFFF\nfg_color:#000000\ntooltip_fg_color:#FFFFFF\ntooltip_bg_color:#000000\nselected_bg_color:#3DAEE9\nselected_fg_color:#FFFFFF\ntext_color:#313639\nbg_color:#EFF0F1"
+gtk-color-scheme	= "base_color:#FFFFFF\nfg_color:#000000\ntooltip_fg_color:#FFFFFF\nselected_bg_color:#3DAEE9\nselected_fg_color:#FFFFFF\ntext_color:#313639\nbg_color:#EFF0F1\ntooltip_bg_color:#343434"
 
 gtk-auto-mnemonics	= 1
 
@@ -14,8 +14,6 @@ style "default"
 	GtkScrollbar::activate-slider	= 1
 	GtkWidget::focus-line-width	= 0
 	GtkWidget::new-tooltip-style	= 1
-	GtkWidget::tooltip-alpha	= 230
-	GtkWidget::tooltip-radius	= 2
 	GtkMenuBar::window-dragging	= 1
 	GtkToolbar::window-dragging	= 1
 	GtkToolbar::internal-padding	= 5
@@ -28,13 +26,16 @@ style "default"
 	GtkButton::default-border	= { 0, 0, 0, 0 }
 	GtkButton::default-outside_border	= { 0, 0, 0, 0 }
 
-	GtkScrollbar::trough-border	= 7
+	GtkScrollbar::trough-border	= 5
+	GtkScrollbar::slider-width	= 10
 	GtkRange::trough-border		= 0
 	GtkRange::slider-width		= 7
 	GtkRange::stepper-size		= 0
 
-	GtkScrollbar::has-backward-stepper		= 0
-	GtkScrollbar::has-forward-stepper		= 0
+	GtkScrollbar::has-backward-stepper		= 1
+	GtkScrollbar::has-forward-stepper		= 1
+	GtkScrollbar::stepper-size			= 10
+	GtkScrollbar::stepper-spacing			= 1
 	GtkScrolledWindow ::scrollbar-spacing		= 0
 	GtkScrolledWindow ::scrollbars-within-bevel	= 1
 
@@ -442,7 +443,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= NORMAL
       file				= "Scrollbars/slider-horiz.png" 
-      border				= { 5, 5, 7, 7 }
+      border				= { 5, 5, 5, 5 }
       stretch				= TRUE
       orientation			= HORIZONTAL
 
@@ -452,7 +453,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= ACTIVE
       file				= "Scrollbars/slider-horiz-active.png" 
-      border				= { 5, 5, 7, 7 }
+      border				= { 5, 5, 5, 5 }
       stretch				= TRUE
       orientation			= HORIZONTAL
 
@@ -462,7 +463,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= PRELIGHT
       file				= "Scrollbars/slider-horiz-prelight.png" 
-      border				= { 5, 5, 7, 7 }
+      border				= { 5, 5, 5, 5 }
       stretch				= TRUE
       orientation			= HORIZONTAL
 
@@ -472,7 +473,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= INSENSITIVE
       file				= "Scrollbars/slider-horiz-insens.png"
-      border				= { 5, 5, 7, 7 }
+      border				= { 5, 5, 5, 5 }
       stretch				= TRUE
       orientation			= HORIZONTAL
 
@@ -485,7 +486,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= NORMAL
       file				= "Scrollbars/slider-vert.png" 
-      border				= { 7, 7, 5, 5 }
+      border				= { 5, 5, 5, 5 }
       stretch				= TRUE
       orientation			= VERTICAL
 
@@ -495,7 +496,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= ACTIVE
       file				= "Scrollbars/slider-vert-active.png" 
-      border				= { 7, 7, 5, 5 }
+      border				= { 5, 5, 5, 5 }
       stretch				= TRUE
       orientation			= VERTICAL
 
@@ -505,7 +506,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= PRELIGHT
       file				= "Scrollbars/slider-vert-prelight.png" 
-      border				= { 7, 7, 5, 5 }
+      border				= { 5, 5, 5, 5 }
       stretch				= TRUE
       orientation			= VERTICAL
 
@@ -515,7 +516,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= INSENSITIVE
       file				= "Scrollbars/slider-vert-insens.png"
-      border				= { 7, 7, 5, 5 }
+      border				= { 5, 5, 5, 5 }
       stretch				= TRUE
       orientation			= VERTICAL
 
@@ -1296,7 +1297,6 @@ style "tooltips"
 
 	bg[NORMAL]	= @tooltip_bg_color
 	fg[NORMAL]	= @tooltip_fg_color
-	bg[SELECTED]	= @tooltip_bg_color
 }
 
 # Chromium
