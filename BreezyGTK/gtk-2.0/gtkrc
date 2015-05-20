@@ -1,6 +1,6 @@
 # Breezy | ScionicSpectre
 
-gtk-color-scheme	= "base_color:#FFFFFF\nfg_color:#000000\ntooltip_fg_color:#FFFFFF\nselected_bg_color:#3DAEE9\nselected_fg_color:#FFFFFF\ntext_color:#313639\nbg_color:#EFF0F1\ntooltip_bg_color:#343434"
+gtk-color-scheme	= -gtk-color-scheme	= "base_color:#FFFFFF\nfg_color:#000000\ntooltip_fg_color:#FFFFFF\ntooltip_bg_color:#000000\nselected_bg_color:#3DAEE9\nselected_fg_color:#FFFFFF\ntext_color:#313639\nbg_color:#EFF0F1"
 
 gtk-auto-mnemonics	= 1
 
@@ -14,6 +14,8 @@ style "default"
 	GtkScrollbar::activate-slider	= 1
 	GtkWidget::focus-line-width	= 0
 	GtkWidget::new-tooltip-style	= 1
+	GtkWidget::tooltip-alpha	= 230
+	GtkWidget::tooltip-radius	= 2
 	GtkMenuBar::window-dragging	= 1
 	GtkToolbar::window-dragging	= 1
 	GtkToolbar::internal-padding	= 5
@@ -1297,6 +1299,7 @@ style "tooltips"
 
 	bg[NORMAL]	= @tooltip_bg_color
 	fg[NORMAL]	= @tooltip_fg_color
+	bg[SELECTED]	= @tooltip_bg_color
 }
 
 # Chromium
