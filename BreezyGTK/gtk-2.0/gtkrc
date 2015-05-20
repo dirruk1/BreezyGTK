@@ -65,6 +65,9 @@ style "default"
 	GtkTreeView::horizontal-separator	= 4
 	GtkTreeView::allow-rules		= 1
 
+	GtkProgressBar::min-horizontal-bar-height	= 8
+	GtkProgressBar::min-vertical-bar-width 		= 8
+
 	# Colors
 
 	bg[NORMAL]		= @bg_color
@@ -1214,38 +1217,47 @@ style "range"
   }
 }
 
-style "progressbar"
-{
-  xthickness            		= 3
-  ythickness            		= 5
+style "progressbar" {
+  xthickness              = 0
+  ythickness              = 0
 
   engine "pixmap" 
   {
     image
     {
-      function				= BOX
-      detail				= "trough"
-      file				= "ProgressBar/trough-progressbar.png"
-      border				= { 3, 3, 3, 3 }
-      stretch				= TRUE
-}
-    image
-    {
-      function				= BOX
-      detail				= "bar"
-      file				= "ProgressBar/progressbar.png"
-      stretch				= TRUE
-      border				= { 3, 3, 3, 3 }
-      orientation			= HORIZONTAL
+      function		= BOX
+      detail		= "trough"
+      file			= "ProgressBar/trough.svg"
+      border		= { 4, 4, 4, 4 }
+      stretch		= TRUE
+      orientation	= HORIZONTAL
     }
     image
     {
-      function				= BOX
-      detail				= "bar"
-      file				= "ProgressBar/progressbar_v.png"
-      stretch				= TRUE
-      border				= { 3, 3, 3, 3 }
-      orientation			= VERTICAL
+      function		= BOX
+      detail		= "trough"
+      file			= "ProgressBar/trough.svg"
+      border		= { 4, 4, 4, 4 }
+      stretch		= TRUE
+      orientation	= VERTICAL
+    }
+    image
+    {
+      function		= BOX
+      detail		= "bar"
+      file			= "ProgressBar/bar.svg"
+      stretch		= TRUE
+      border		= { 4, 4, 4, 4 }
+      orientation	= HORIZONTAL
+    }
+    image
+    {
+      function		= BOX
+      detail		= "bar"
+      file			= "ProgressBar/bar.svg"
+      stretch		= TRUE
+      border		= { 4, 4, 4, 4 }
+      orientation	= VERTICAL
     }
   }
 }
